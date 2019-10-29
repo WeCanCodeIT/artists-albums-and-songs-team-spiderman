@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.17.1",
+    "jest": "^24.9.0",
     "mongodb": "^3.3.3",
     "mongoose": "^5.7.7",
     "postman": "^0.2.0"
