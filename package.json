@@ -8,6 +8,7 @@
     "jest": "^24.9.0",
     "mongodb": "^3.3.3",
     "mongoose": "^5.7.7",
+    "nodemon": "^1.19.4",
     "postman": "^0.2.0"
   },
   "devDependencies": {},
