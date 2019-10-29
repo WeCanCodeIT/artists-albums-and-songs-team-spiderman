@@ -1,26 +1,19 @@
-{
+
   "name": "team-spiderman",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "private": true,
+
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "dependencies": {
-    "express": "^4.17.1",
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
     "mongodb": "^3.3.3",
     "mongoose": "^5.7.7",
-    "postman": "^0.2.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WeCanCodeIT/artists-albums-and-songs-team-spiderman.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WeCanCodeIT/artists-albums-and-songs-team-spiderman/issues"
-  },
-  "homepage": "https://github.com/WeCanCodeIT/artists-albums-and-songs-team-spiderman#readme"
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.4"
+  }
 }
