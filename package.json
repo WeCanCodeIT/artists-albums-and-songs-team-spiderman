@@ -1,8 +1,10 @@
 {
   "name": "team-spiderman",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "jest": "^24.9.0",
@@ -12,9 +14,6 @@
     "postman": "^0.2.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WeCanCodeIT/artists-albums-and-songs-team-spiderman.git"
