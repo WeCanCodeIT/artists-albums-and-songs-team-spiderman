@@ -1,4 +1,3 @@
-
 const ArtistDomain = require("../models/artist-domain");
 const ArtistModel = require("../models/artist-model");
 

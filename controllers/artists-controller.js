@@ -8,9 +8,10 @@ module.exports = {
       res.json({ response });
     });
   },
+
   getAllArtists(req, res) {
     ArtistsService.findAll(Artists => {
-      res.json(Artists);
+      res.json({ Artists });
     });
   }
 };
