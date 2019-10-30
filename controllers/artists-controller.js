@@ -2,15 +2,18 @@ const ArtistsService = require("../services/artists-services");
 
 module.exports = {
   addNewArtist(req, res) {
-    const { name, image, album, recordLabel } = req.body;
+    const { name, image, recordLabel } = req.body;
 
-    ArtistsService.add(name, image, album, recordLabel, response => {
+    ArtistsService.add(name, image, recordLabel, response => {
       res.json({ response });
+    
+    console.log({response})
     });
   },
+
   getAllArtists(req, res) {
     ArtistsService.findAll(Artists => {
-      res.json(Artists);
+      res.json({ Artists });
     });
   }
 };
