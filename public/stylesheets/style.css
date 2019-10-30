@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.artist-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid black;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.artist-card__artist-name {
+  font-size: 24pt;
+  margin: 4px;
+}
+.artist-card__artist-image {
+  min-height: 250px;
+  min-width: 150px;
+  border: 2px solid black;
+
+}
