@@ -14,7 +14,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.19.4",
     "postman": "^0.2.0"
-},
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
