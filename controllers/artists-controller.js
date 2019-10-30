@@ -4,7 +4,7 @@ module.exports = {
   addNewArtist(req, res) {
     const { name, image, album, recordLabel } = req.body;
 
-    ArtistsService.add(name, image, album, recordLabel, response => {
+    ArtistsService.add(name, image, recordLabel, response => {
       res.json({ response });
     });
   },
