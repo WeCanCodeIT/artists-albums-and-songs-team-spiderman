@@ -12,5 +12,12 @@ module.exports = {
     SongServices.findAll(Song => {
       res.json(Song);
     });
+  },
+
+  removeOneSong(req,res){
+    const id = req.body
+    SongServices.removeSong(id, response => {
+      res.json({ response });
+    })
   }
-};
+}

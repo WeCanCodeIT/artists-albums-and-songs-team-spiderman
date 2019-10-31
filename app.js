@@ -8,7 +8,7 @@ const app = express();
 const indexRouter = require('./routes/index-router');
 const artistsRouter = require('./routes/artists-router');
 const songRouter = require('./routes/song-router');
-var app = express();
+
 
 app.use(logger('dev'));
 app.use(express.json());
