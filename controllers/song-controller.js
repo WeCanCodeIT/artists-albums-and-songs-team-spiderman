@@ -22,7 +22,7 @@ module.exports = {
   },
 
   updateOneSong(req,res){
-    // const revision = req.;
+    // const revision = req.body;
     const {_id,year} = req.body;
     // console.log(year)
     // console.log(req.body)
@@ -33,8 +33,4 @@ module.exports = {
     res.json({ response });
     })
   },
-
-  // testUpdateOneSong(req,res){
-
-  // }
 }
