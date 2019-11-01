@@ -13,5 +13,10 @@ module.exports = {
 
   removeSong(id, callback){
     SongModel.deleteOne({_id: id}).then(callback)
+  },
+
+  updateSong(id,year,callback){
+console.log(year)
+    SongModel.updateOne({_id: id},{$set: {year}}).then(callback)
   }
 };
