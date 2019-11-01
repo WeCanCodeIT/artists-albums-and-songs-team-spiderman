@@ -12,5 +12,25 @@ module.exports = {
     SongServices.findAll(Song => {
       res.json(Song);
     });
-  }
-};
+  },
+
+  removeOneSong(req,res){
+    const id = req.body
+    SongServices.removeSong(id, response => {
+      res.json({ response });
+    })
+  },
+
+  updateOneSong(req,res){
+    // const revision = req.body;
+    const {_id,year} = req.body;
+    // console.log(year)
+    // console.log(req.body)
+    console.log({_id,year})
+    // console.log(_id)
+    // console.log(year)
+    SongServices.updateSong(_id, year, response => {
+    res.json({ response });
+    })
+  },
+}

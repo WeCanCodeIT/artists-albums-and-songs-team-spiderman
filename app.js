@@ -10,8 +10,6 @@ const artistsRouter = require('./routes/artists-router');
 const albumsRouter = require('./routes/albums-router');
 const songRouter = require('./routes/song-router');
 
-var app = express();
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

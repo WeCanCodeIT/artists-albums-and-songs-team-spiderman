@@ -7,4 +7,8 @@ router.get("/", SongController.getAllSongs);
 
 router.post("/", SongController.addNewSong);
 
+router.delete("/", SongController.removeOneSong);
+
+router.put("/", SongController.updateOneSong);
+
 module.exports = router;
