@@ -15,5 +15,19 @@ module.exports = {
     ArtistsService.findAll(Artists => {
       res.json({ Artists });
     });
-  }
+  },
+
+  removeOneArtist(req,res){
+    const id = req.body
+    ArtistsService.removeArtist(id, response => {
+      res.json({ response });
+    })
+  },
+
+  updateOneArtist(req,res){
+    const {_id,image} = req.body;
+    ArtistsService.updateArtist(_id, image, response => {
+    res.json({ response });
+    })
+  },
 };

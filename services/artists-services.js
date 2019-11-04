@@ -8,5 +8,14 @@ module.exports = {
   },
   findAll(callback) {
     ArtistModel.find().then(callback);
+  },
+
+  removeArtist(id, callback){
+    ArtistModel.deleteOne({_id: id}).then(callback)
+  },
+
+  updateArtist(id,image,callback){
+    console.log(image)
+    ArtistModel.updateOne({_id: id},{$set: {image}}).then(callback)
   }
 };

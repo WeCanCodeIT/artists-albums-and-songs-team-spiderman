@@ -6,6 +6,7 @@ const Song = mongoose.model("Song", {
     album: {required: true, type: String},
     recordLabel: {required: true, type: String},
     year: {required: true, type: String},
+    video: {required: false, type: String},
 })
 
 module.exports = Song;

@@ -9,6 +9,6 @@ router.post("/", SongController.addNewSong);
 
 router.delete("/", SongController.removeOneSong);
 
-router.put("/", SongController.updateOneSong);
+router.patch("/", SongController.updateOneSong);
 
 module.exports = router;

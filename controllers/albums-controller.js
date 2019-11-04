@@ -1,4 +1,4 @@
-const AlbumsService = require("../services/albums-service");
+const AlbumsService = require("../services/albums-services");
 
 module.exports = {
     addNewAlbums(req, res) {
