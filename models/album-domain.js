@@ -1,8 +1,8 @@
 class Album {
-    constructor (title, image, songs, recordLabel) {
+    constructor (artistName, title, image, songs, recordLabel) {
+        this.artistName = artistName;
         this.title = title;
         this.image = image;
-        this.songs = songs;
         this.recordLabel = recordLabel;
     }
 
