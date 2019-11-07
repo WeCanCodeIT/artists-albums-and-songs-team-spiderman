@@ -1,5 +1,5 @@
 class Album {
-    constructor (title, image, songs, recordLabel) {
+    constructor (title, image, recordLabel, songs) {
         this.title = title;
         this.image = image;
         this.recordLabel = recordLabel;

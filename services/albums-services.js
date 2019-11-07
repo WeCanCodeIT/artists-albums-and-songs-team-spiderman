@@ -1,9 +1,9 @@
-const AlbumsDomain = require("../models/album-domain");
+const AlbumDomain = require("../models/album-domain");
 const AlbumModel = require("../models/album-model");
 
 module.exports = {
-  add(title, image, recordLabel, callback) {
-      const newAlbum = new AlbumsModel(new AlbumsDomain(title, image, recordLabel));
+  add(title, image, recordLabel, songs, callback) {
+      const newAlbum = new AlbumModel(new AlbumDomain(title, image, recordLabel, songs));
       newAlbum.save().then(callback);
   },
   findAll(callback) {

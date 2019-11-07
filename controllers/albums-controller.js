@@ -2,9 +2,9 @@ const AlbumsService = require("../services/albums-services");
 
 module.exports = {
     addNewAlbum(req, res) {
-        const {title, image, recordLabel } = req.body;
+        const {title, image, recordLabel, songs } = req.body;
 
-        AlbumsService.add(title, image, recordLabel, response => {
+        AlbumsService.add(title, image, recordLabel, songs, response => {
             res.json({response});
         });
     },
@@ -15,7 +15,7 @@ module.exports = {
     },
     
   removeOneAlbum(req, res){
-    const id = req.body
+    const id = req.body;
     AlbumsService.removeAlbum(id, response => {
       res.json({ response });
     })

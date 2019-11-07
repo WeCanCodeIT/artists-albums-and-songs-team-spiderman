@@ -1,10 +1,7 @@
 class Song {
-    constructor (name , artist, album, recordLabel, year) {
+    constructor (name, video) {
         this.name = name;
-        this.artist = artist;
-        this.album = album;
-        this.recordLabel = recordLabel;
-        this.year = year;
+        this.video = video;
     }
 }
 module.exports = Song; 
