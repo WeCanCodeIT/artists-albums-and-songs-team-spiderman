@@ -6,8 +6,8 @@ module.exports = {
 
     ArtistsService.add(name, image, recordLabel, response => {
       res.json({ response });
-    
-    console.log({response})
+
+      console.log({ response });
     });
   },
 
@@ -17,17 +17,17 @@ module.exports = {
     });
   },
 
-  removeOneArtist(req,res){
-    const id = req.body
+  removeOneArtist(req, res) {
+    const id = req.body;
     ArtistsService.removeArtist(id, response => {
       res.json({ response });
-    })
+    });
   },
 
-  updateOneArtist(req,res){
-    const {_id,image} = req.body;
+  updateOneArtist(req, res) {
+    const { _id, image } = req.body;
     ArtistsService.updateArtist(_id, image, response => {
-    res.json({ response });
-    })
-  },
+      res.json({ response });
+    });
+  }
 };

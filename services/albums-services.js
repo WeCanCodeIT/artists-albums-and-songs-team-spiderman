@@ -1,5 +1,5 @@
 const AlbumsDomain = require("../models/album-domain");
-const AlbumsModel = require("../models/album-model");
+const AlbumModel = require("../models/album-model");
 
 module.exports = {
   add(artistName, title, image, recordLabel, callback) {
