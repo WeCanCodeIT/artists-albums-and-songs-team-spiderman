@@ -1,10 +1,9 @@
 class Album {
-    constructor (artistName, title, image, songs, recordLabel) {
-        this.artistName = artistName;
+    constructor (title, image, songs, recordLabel) {
         this.title = title;
         this.image = image;
         this.recordLabel = recordLabel;
+        this.songs = songs;
     }
-
 }
 module.exports = Album

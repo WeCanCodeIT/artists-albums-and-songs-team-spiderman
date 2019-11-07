@@ -1,8 +1,8 @@
 class Artist {
-    constructor (name , image, recordLabel) {
+    constructor (name , image, albums) {
         this.name = name;
         this.image = image;
-        this.recordLabel = recordLabel;
+        this.albums = albums;
     }
 }
 module.exports = Artist; 

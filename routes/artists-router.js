@@ -11,6 +11,6 @@ router.post("/", ArtistController.addNewArtist);
 
 router.delete("/", ArtistController.removeOneArtist);
 
-router.put("/", ArtistController.updateOneArtist);
+// router.put("/", ArtistController.updateArtist);
 
 module.exports = router;

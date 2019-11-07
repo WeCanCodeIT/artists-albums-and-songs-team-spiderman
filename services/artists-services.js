@@ -2,8 +2,8 @@ const ArtistDomain = require("../models/artist-domain");
 const ArtistModel = require("../models/artist-model");
 
 module.exports = {
-  add(name, image, recordLabel, callback) {
-    const newArtist = new ArtistModel(new ArtistDomain(name, image, recordLabel));
+  add(name, image, albums, callback) {
+    const newArtist = new ArtistModel(new ArtistDomain(name, image, albums));
     newArtist.save().then(callback);
   },
   findAll(callback) {
@@ -14,8 +14,14 @@ module.exports = {
     ArtistModel.deleteOne({_id: id}).then(callback)
   },
 
-  updateArtist(id,image,callback){
+  update_Artist_Image(id,image,callback){
     console.log(image)
     ArtistModel.updateOne({_id: id},{$set: {image}}).then(callback)
+  },
+
+  update_Artist_Name(id,name,callback){
+    console.log(name)
+    ArtistModel.updateOne({_id: id},{$set: {name}}).then(callback)
   }
+
 };
