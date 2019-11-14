@@ -4,15 +4,22 @@ module.exports = {
   addNewSong(req, res) {
     const { name, artist, album, recordLabel, year, video } = req.body;
 
-    SongServices.add(name, artist, album, recordLabel, year, video, response => {
+    SongServices.add(name, album, video, response => {
       res.json({ response });
     });
   },
 
   getAllSongs(req, res) {
-    SongServices.findAll(Song => {
-      res.json(Song);
+    SongServices.findAll(Songs => {
+      res.json(Songs);
     });
+  },
+
+  getSongById(req, res) {
+    const id = req.params.id;
+    SongServices.findById(id, response => {
+      res.json({response})
+    })
   },
 
   removeOneSong(req, res){

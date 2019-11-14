@@ -12,6 +12,8 @@ router.post("/", AlbumsController.addNewAlbum);
 
 router.delete("/", AlbumsController.removeOneAlbum);
 
+router.put("/:id", AlbumsController.pushOneSongToAlbum)
+
 router.patch("/", AlbumsController.updateOneAlbum);
 
 module.exports = router;

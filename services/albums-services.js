@@ -3,16 +3,21 @@ const AlbumModel = require("../models/album-model");
 const ArtistModel = require('../models/artist-model')
 
 module.exports = {
-  add(title, image, recordLabel, songs, callback) {
-      const newAlbum = new AlbumModel(new AlbumDomain(title, image, recordLabel, songs));
+  add(title, image, recordLabel, songs, artist, callback) {
+      const newAlbum = new AlbumModel(new AlbumDomain(title, image, recordLabel, artist, songs));
       newAlbum.save().then(callback);
   },
+
+  addSong(albumId, newSong, callback) {
+    AlbumModel.updateOne({_id: albumId}, {$set: newSong}).then(callback);
+  },
+
   findAll(callback) {
       AlbumModel.find().then(callback);
   },
 
-  findById(aritstId, albumId, callback) {
-    AlbumModel.findById(aritstId, albumId).then(callback)
+  findById(id, callback) {
+    AlbumModel.findById(id).then(callback)
   },
 
   removeAlbum(id, callback){

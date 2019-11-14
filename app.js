@@ -20,6 +20,6 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/artists", artistsRouter);
-app.use("/albums/", albumsRouter);
+app.use("/albums", albumsRouter);
 app.use("/songs", songRouter);
 module.exports = app;

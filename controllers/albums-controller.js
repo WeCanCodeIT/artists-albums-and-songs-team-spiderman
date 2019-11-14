@@ -30,11 +30,18 @@ module.exports = {
   },
 
   // populate example
-  populateSongsFromAlbum(req, res) {
+  // populateSongsFromAlbum(req, res) {
   // const albumSongs = AlbumsService.findOne("5db9de6ef1ce113c186ad83e").populate("songs").exec();
   
+  // },
+  pushOneSongToAlbum(req, res) {
+    const newSong = req.body;
+    const albumId = req.params.id;
+    AlbumsService.addSong(albumId, newSong, response => {
+      res.json({ response });
+    });
   },
-  
+
   removeOneAlbum(req, res){
     const id = req.body;
     AlbumsService.removeAlbum(id, response => {
