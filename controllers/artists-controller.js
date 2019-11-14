@@ -11,6 +11,13 @@ module.exports = {
     });
   },
 
+  getOneArtist(req, res) {
+    const id = req.params.id;
+    ArtistsService.findById(id, ArtistInfo => {
+      res.json({ ArtistInfo });
+    })
+  },
+
   getAllArtists(req, res) {
     ArtistsService.findAll(Artists => {
       res.json({ Artists });

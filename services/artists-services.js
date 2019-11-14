@@ -10,6 +10,10 @@ module.exports = {
     ArtistModel.find().then(callback);
   },
 
+  findById(id, callback) {
+    ArtistModel.findById(id).then(callback);
+  },
+
   removeArtist(id, callback){
     ArtistModel.deleteOne({_id: id}).then(callback)
   },
